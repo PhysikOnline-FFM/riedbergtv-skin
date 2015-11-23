@@ -1,0 +1,106 @@
+/*
+	slider
+*/
+
+#the-slider {
+	background-size: cover;
+	position: relative;
+	/*
+	border-left: 19px solid transparent;
+	border-right: 19px solid transparent;
+	width: 100%;
+	margin: 13px auto 13px; */
+}
+
+#the-slider div {
+	width: 100%;
+	height: 360px;
+}
+ul.slidesjs-pagination {
+	list-style: none;
+}
+.slidesjs-pagination { 
+	float: right; 
+}
+li.slidesjs-pagination-item { 
+	float: left; 
+	margin: 1px 0px 0px 1px;
+}
+.slidesjs-pagination li a {
+	display: block;
+	width: 13px;
+	height: 0;
+	padding-top: 13px;
+	background-image: url(pagination.png);
+	background-position: 0 0;
+	float: left;
+	overflow: hidden;
+}
+.slidesjs-pagination li a.active, .slidesjs-pagination li a:hover.active { background-position: 0 -13px }
+.slidesjs-pagination li a:hover { background-position: 0 -26px }
+a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: url(btns-next-prev.png);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+}
+a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+}
+
+.slide-title {
+	display: block;
+	position: absolute;
+	left: 40px;
+	bottom: 40px;
+	width: 70%;
+}
+
+.slide-title h3 { margin-top: 8px; }
+
+#the-slider h2 span {
+	font-family: Volkhov, 'Noto Serif', Georgia, serif;
+	font-weight: 700;
+	font-size: 32px;
+	color: white;
+
+	padding: 5px 10px 3px 10px;
+	background-color: rgb(255,50,103);
+	background-color: rgba(255,50,103,0.75);
+	/*box-shadow: 10px 0 0 rgba(255,50,103,1), -10px 0 0 rgba(255,50,103,1);*/
+}
+
+#the-slider h3 span {
+	font-family: Bitter, sans-serif;
+	font-weight: 300;
+	font-size: 21px;
+	color: black;
+
+	margin-left: 10px;
+	padding: 5px 10px 3px 10px;
+	background-color: rgb(255,255,255);
+	background-color: rgba(255,255,255,0.6);
+	/*box-shadow: 10px 0 0 rgba(255,255,255,1), -10px 0 0 rgba(255,255,255,1);*/
+}
+
+#wiki-body .slide-title h2, #wiki-body .slide-title h3 { border: none; }
