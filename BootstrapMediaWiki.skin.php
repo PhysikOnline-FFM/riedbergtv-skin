@@ -152,41 +152,41 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 						</div>
 					</div>
 			</div><!-- topbar -->
-				<div class="subnav subnav-fixed">
-					<div class="container">
-						<div class="--collapse --navbar-collapse">
-							<div class="row" id="subnav-top">
-								<div class="col-xs-7 col-md-6" id="subnav-top-left">
-									<div class="navbar-header">
-										<a class="navbar-brand" href="<?php echo $this->data['nav_urls']['mainpage']['href'] ?>" title="<?php echo $wgSitename ?>">
-										<?php echo isset( $wgLogo ) && $wgLogo ? "<img src='{$wgLogo}' alt='RiedbergTV'/> " : ''; echo $wgSitename;?>
-										</a>
+			<div class="subnav subnav-NOT-fixed">
+				<div class="container">
+					<div class="--collapse --navbar-collapse">
+						<div class="row" id="subnav-top">
+							<div class="col-xs-7 col-md-6" id="subnav-top-left">
+								<div class="navbar-header">
+									<a class="navbar-brand" href="<?php echo $this->data['nav_urls']['mainpage']['href'] ?>" title="<?php echo $wgSitename ?>">
+									<?php echo isset( $wgLogo ) && $wgLogo ? "<img src='{$wgLogo}' alt='RiedbergTV'/> " : ''; echo $wgSitename;?>
+									</a>
+								</div>
+							</div>
+						
+							<div class="col-xs-5 col-md-6 text-right" id="subnav-top-right">
+								<form class="navbar-search navbar-form" action="<?php $this->text( 'wgScript' ) ?>" id="searchform" role="search">
+									<div class="input-group">
+										<input class="form-control" type="search" name="search" placeholder="Suche" title="Suche in <?php echo $wgSitename; ?> [ctrl-option-f]" accesskey="f" id="searchInput" autocomplete="off">
+										<label for="searchInput" class="input-group-addon"><i class="fa fa-search"></i></label>
 									</div>
-								</div>
-							
-								<div class="col-xs-5 col-md-6 text-right" id="subnav-top-right">
-									<form class="navbar-search navbar-form" action="<?php $this->text( 'wgScript' ) ?>" id="searchform" role="search">
-										<div class="input-group">
-											<input class="form-control" type="search" name="search" placeholder="Suche" title="Suche in <?php echo $wgSitename; ?> [ctrl-option-f]" accesskey="f" id="searchInput" autocomplete="off">
-											<label for="searchInput" class="input-group-addon"><i class="fa fa-search"></i></label>
-										</div>
-										<input type="hidden" name="title" value="Special:Search">
-									</form>
-									
-								</div>
+									<input type="hidden" name="title" value="Special:Search">
+								</form>
+								
 							</div>
-							
-							<div class="row" id="subnav-bottom">
-								<div class="col-xs-12" id="subnav-bottom-catlinks">
-									<ul class="nav navbar-nav">
-										<?php echo $this->nav( $this->get_page_links( 'RiedbergTV:NavLinks' ) ); ?>
-									</ul>
-								</div>
-							</div>
-
 						</div>
+						
+						<div class="row" id="subnav-bottom">
+							<div class="col-xs-12" id="subnav-bottom-catlinks">
+								<ul class="nav navbar-nav">
+									<?php echo $this->nav( $this->get_page_links( 'RiedbergTV:NavLinks' ) ); ?>
+								</ul>
+							</div>
+						</div>
+
 					</div>
 				</div>
+			</div>
 		</nav>
 		<div id="wiki-outer-body">
 			<div id="wiki-body" class="container">

@@ -3,7 +3,8 @@ body {
 	background-repeat: repeat-x;
 	background-position: center 80px;
 	color: #222;
-	padding-top: 156px;
+	/* padding-top: 156px; /* for .subnav-fixed */
+	padding-top: 30px; /* for static .subnav */
 }
 
 body.page-Main_Page .page-header,
@@ -243,7 +244,7 @@ a.new {
 }
 
 .bottom {
-	background: #f5f5f5;
+	background: #f1f1f1;
 	margin-top: 1em;
 	padding-bottom: 2em;
 	padding-top: 2em;
@@ -330,20 +331,23 @@ img.thumbborder {
 
 /* Subnav */
 .subnav {
-	background: #eee;
-	border-bottom: 1px solid #f5f5f5;
-  width: 100%;
-  height: 50;
+	width: 100%;
 	margin-top: 2px;
+	/*
+	background: #eee;
+	height: 50px;
 	-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
 	   -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
 	        box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+	*//*
+	border-bottom: 1px solid #f5f5f5;
 	border-color: #d5d5d5;
 	border-width: 0 0 1px;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	*/
 }
 
 @media (max-width: 767px) {
@@ -383,22 +387,25 @@ img.thumbborder {
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 	text-decoration: none;
 	color: #333;
-  margin: 0;
-  padding-top:    16px;
-  padding-bottom: 16px;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
+	margin: 0;
+	padding: 9px 10px 3px 10px;
+	border: none;
+	border-bottom: 6px solid rgba(255,255,255,1);
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	
+	-moz-transition: all 0.7s ease-out;
+	-webkit-transition: all 0.7s ease-out;
+	transition: all 0.7s ease-out;
 }
 
 .subnav .nav > li > a:hover,
 .subnav .nav > .active > a,
 .subnav .nav > .active > a:hover {
   color: #333;
-  background-color: #ddd;
-  border-right-color: transparent;
+  background-color: rgba(235,235,235,0.3);
+  border-color: rgba(99,255,143,1);
   -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
      -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
           box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
@@ -433,7 +440,7 @@ img.thumbborder {
 .subnav .nav-pills .open .dropdown-toggle, 
 .subnav .nav > .open.active > a:hover {
 	color: #333;
-	background-color: #ddd;
+	background-color: rgba(99,255,143,0.7);
 	border-color: #ddd;
 }
 
@@ -467,17 +474,17 @@ pre.linenums ol {
 .subnav .nav > li:first-child > a,
 .subnav .nav > li:first-child > a:hover {
 	-webkit-border-radius: 0;
-		 -moz-border-radius: 0;
-					border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
 }
 
 @media (max-width: 979px) {
-	body { padding-top: 103px; }
+	/* body { padding-top: 103px; } /* for .subnav-fixed */
 
-	.mw-headline {
+	/* .mw-headline {
 		margin-top: -103px;
 		padding-top: 103px;
-	}
+	} /* for .subnav-fixed */
 
 	.subnav #subnav-select {
 		margin-left: 20px;
