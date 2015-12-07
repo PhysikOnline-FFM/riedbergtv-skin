@@ -143,10 +143,42 @@ div#the-slider { display: none !important}
  *
  * Videolinks auf Startseite
  */
-.videoliste .videolink  a.video:hover {
+.videoliste.hauptseite .videolink  a.video {
+	display: block;
+	position: relative;
+	margin-bottom: 8px;
+}
+.videoliste.hauptseite .videolink  a.video:hover {
 	text-decoration: none;
 }
-.videoliste .videolink  img {
+.videoliste.hauptseite .videolink  h3 {
+	opacity: 0.5;
+	transition: all 200ms linear 0s;
+	min-height: 43px;
+	/*line-height: 40px;*/
+	width: 100%;
+	padding: 1px 6px;
+	border: none !important;
+	
+	position: absolute;
+	bottom: 6px;
+	
+	color: white !important;
+	background-color: rgba(0, 0, 0, 0.85);
+	/*background-color: rgba(255, 255, 255, 0.8);*/
+}
+.videoliste.hauptseite .videolink :hover  h3,
+.videoliste.hauptseite .videolink :focus  h3,
+.videoliste.hauptseite .videolink :active  h3 {
+	opacity: 1;
+	transition: all 200ms linear 0s;
+	
+	color: #222 !important;
+	/*Green from navbar# background-color: rgba(99,255,143, 0.8);*/
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.videoliste.hauptseite .videolink  img {
 	max-width: 100%;
 	height: auto;
 }
