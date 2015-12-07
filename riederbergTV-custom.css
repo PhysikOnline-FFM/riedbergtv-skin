@@ -1,3 +1,7 @@
+#wiki-body {
+	padding: 0;
+}
+
 /* Reduziere Höhe von normaler Navbar */
 .navbar {
     min-height: 30px;
@@ -147,93 +151,55 @@ div#the-slider { display: none !important}
 	height: auto;
 }
 
-
-/*
-*	Pre-Filled bei bootstrap-mediawiki skin, maybe not needed
-*	(below this comment)
-*/
-.jumbotron {
-	background-color: #333;
-	color: #eee;
+/* 
+ *
+ * Videolinks auf anderen Seiten
+ */
+.videoliste:not(.hauptseite) .videolink,
+.videoliste:not(.hauptseite) .videolink  .beschreibung {
+	height: 70px;
+}
+.videoliste:not(.hauptseite) .videolink  .vorschaubild {
+	float: left;
+	clear: both;
+	margin-right: 5px;
+}
+.videoliste:not(.hauptseite) .videolink  .vorschaubild  a.video{
+	display: inline-block;
+}
+.videoliste:not(.hauptseite) .videolink  .beschreibung  h4 {
+	margin-top: 2px;
+	margin-bottom: 4px;
 }
 
-.jumbotron pre {
-	color: #eee;
+/* 
+ *
+ * Videoseite
+ */
+video {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
 }
-
-.jumbotron .new {
-	color: red;
+.videospalte {
+	text-align: justify;
+	
+	/* Kopiere BS CSS für col-md-8 hier herein, um nicht in allen Videos die Klasse manuell einfügen zu müssen */
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
 }
-
-.jumbotron h1 .mw-headline {
-	text-shadow: 1px 1px 0 #000;
-}
-
-@media (min-width: 520px) {
-	.jumbotron pre {
-		width: 523px;
+@media (min-width: 992px) {
+	/* Kopiere BS CSS für col-md-8 hier herein, um nicht in allen Videos die Klasse manuell einfügen zu müssen */
+	.videospalte {
+		float: left;
+		width: 66.6667%;
 	}
 }
 
-.mud-dir {
-	background: #fff;
-	border: 1px solid #eee;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	box-shadow: 0 0 5px rgba( 0, 0, 0, 0.05 );
-	position: relative;
-}
-
-.mud-dir .reverse-short,
-.mud-dir .reverse-long,
-.mud-dir .long,
-.mud-dir .short {
-	padding: 0.5em;
-}
-
-.mud-dir .long {
-	display: none;
-	padding: 0.5em;
-}
-
-.mud-dir .toggle {
-	background: #eee;
-	color: #555;
-	cursor: pointer;
-	display: block;
-	font-size: 0.9em;
-	padding: 0.5em;
-}
-
-.mud-dir.show-long .long {
-	display: block;
-}
-
-.mud-dir.show-long .short {
-	display: none;
-}
-
-.mud-dir .reverse-short,
-.mud-dir .reverse-long {
-	display: none;
-}
-
-.mud-dir.show-reverse .short,
-.mud-dir.show-reverse .long {
-	display: none;
-}
-
-.mud-dir.show-reverse .reverse-short {
-	display: block;
-}
-
-.mud-dir.show-reverse.show-long .reverse-short {
-	display: none;
-}
-
-.mud-dir.show-reverse.show-long .reverse-long {
-	display: block;
+.seitenleiste table.wikitable {
+	margin-top: 0px;
 }
 
 /* 
@@ -261,4 +227,29 @@ div#the-slider { display: none !important}
     opacity: 1;
     height: 20px;
     width: 20px;
+}
+
+@media (max-width: 400px) {
+	h1, .h1 {font-size: 1.3em}
+	h2, .h2 {font-size: 1.2em}
+	h3, .h3 {font-size: 1.1em}
+}
+@media (min-width: 401px) {
+	h1, .h1 {font-size: 1.8em}
+	h2, .h2 {font-size: 1.5em}
+	h3, .h3 {font-size: 1.2em}
+}
+@media (min-width: 768px) {
+	h1, .h1 {font-size: 2.0em}
+	h2, .h2 {font-size: 1.7em}
+	h3, .h3 {font-size: 1.3em}
+}
+@media (max-width: 769px) {
+	#wiki-body.container, .videospalte {
+		padding: 0;
+	}
+	body {padding-top: 40px}
+}
+@media (max-width: 979px) {
+	body {padding-top: 30px}
 }
