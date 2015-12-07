@@ -31,6 +31,8 @@ $wgResourceModules['skins.bootstrapmediawiki'] = array(
 		$skinDir . '/google-code-prettify/prettify.css'          => array( 'media' => 'all' ),
 		$skinDir . '/style.css'                                  => array( 'media' => 'all' ),
 		$skinDir . '/slidejs/slidejs.css'                        => array( 'media' => 'all' ),
+		$skinDir . '/videojs/video-js.css'                       => array( 'media' => 'screen' ),
+		$skinDir . '/videojs/videojs-hdtoggle.css'               => array( 'media' => 'screen' ),
 		$skinDir . '/riederbergTV-custom.css'                    => array( 'media' => 'all' ),
 	),
 	'scripts' => array(
@@ -40,6 +42,8 @@ $wgResourceModules['skins.bootstrapmediawiki'] = array(
 		$skinDir . '/slidejs/jquery.slides.min.js',
 		$skinDir . '/js/behavior.js',
 		$skinDir . '/js/html5shiv.js',
+		#$skinDir . '/videojs/videoplusHD.js',
+		$skinDir . '/js/pwp_sitefunctions_randomvideo_only.js',
 		$skinDir . '/riederbergTV-custom.js',
 	),
 	'dependencies' => array(

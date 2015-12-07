@@ -14,7 +14,6 @@ if ( ! defined( 'MEDIAWIKI' ) ) {
 
 //File removed on new mediawiki versions (1.24.1 at least).
 //require_once('includes/SkinTemplate.php');
-
 if(file_exists('includes/SkinTemplate.php')){
     require_once('includes/SkinTemplate.php');
 }
@@ -242,28 +241,31 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 				?>
 			</div><!-- container -->
 		</div>
-		<div class="bottom">
+		<footer class="bottom">
 			<div class="container">
+				<div id="footer-gfx-container" class="visible-md visible-lg visible-md-block visible-lg-block">
+					<img id="footer-gfx" src="/w/skins/RiedbergTV/images/footer-gfx.png" />
+				</div> 
+				
 				<?php $this->includePage('RiedbergTV:Footer'); ?>
-				<footer>
-					<p>&copy; <?php echo date('Y'); ?> by <a href="<?php echo (isset($wgCopyrightLink) ? $wgCopyrightLink : 'http://borkweb.com'); ?>"><?php echo (isset($wgCopyright) ? $wgCopyright : 'BorkWeb'); ?></a> 
-						&bull; Powered by <a href="http://mediawiki.org">MediaWiki</a> 
-					</p>
-				</footer>
+			  
+				<p>&copy; <?php echo date('Y'); ?> by <a href="<?php echo (isset($wgCopyrightLink) ? $wgCopyrightLink : 'http://borkweb.com'); ?>"><?php echo (isset($wgCopyright) ? $wgCopyright : 'BorkWeb'); ?></a> 
+					&bull; Powered by <a href="http://mediawiki.org">MediaWiki</a> 
+				</p>
 			</div><!-- container -->
-		</div><!-- bottom -->
+		</footer><!-- bottom -->
 
 		<?php
 		$this->html('bottomscripts'); /* JS call to runBodyOnloadHook */
 		$this->html('reporttime');
 
-		if ( $this->data['debug'] ) {
-			?>
-			<!-- Debug output:
-			<?php $this->text( 'debug' ); ?>
-			-->
-			<?php
-		}//end if
+			if ( $this->data['debug'] ) {
+				?>
+				<!-- Debug output:
+				<?php $this->text( 'debug' ); ?>
+				-->
+				<?php
+			}//end if
 		?>
 		</body>
 		</html>

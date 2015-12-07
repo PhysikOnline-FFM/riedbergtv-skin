@@ -198,8 +198,25 @@ video {
 	}
 }
 
-.seitenleiste table.wikitable {
+.seitenleiste table.wikitable, .seitenleiste h3 {
 	margin-top: 0px;
+}
+
+
+/* 
+ *
+ * Footer
+ */
+ footer.bottom {
+	color: white;
+    background: #222;
+    margin-top: 5.5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+footer.bottom div#footer-gfx-container {
+    margin-top: -105px; 
 }
 
 /* 
