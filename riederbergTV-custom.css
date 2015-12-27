@@ -85,6 +85,8 @@
 	margin-top: -10px;
 }
 
+div#hauptseite-projektbeschreibung  p {margin: 0}
+
 /* Screen Responsive Stuff */
 div#the-slider { display: none !important}
 
@@ -117,6 +119,11 @@ div#the-slider { display: none !important}
 @media (min-width: 992px) {
 	div#the-slider { display: block !important}
 	
+	div#hauptseite-projektbeschreibung {margin-top: -2em}
+	div#hauptseite-projektbeschreibung  .mw-headline {
+		margin-top: 0;
+	}
+
 	.subnav .navbar-brand {
 		font-size: 4.1em;
 		padding: 8px 0;
@@ -177,6 +184,7 @@ div#the-slider { display: none !important}
 	/*Green from navbar# background-color: rgba(99,255,143, 0.8);*/
 	background-color: rgba(255, 255, 255, 0.8);
 }
+.videoliste.hauptseite .videolink  * .subtitle.small { font-size: 0.8em }
 
 .videoliste.hauptseite .videolink  img {
 	max-width: 100%;
@@ -242,13 +250,13 @@ video {
  footer.bottom {
 	color: white;
     background: #222;
-    margin-top: 5.5em;
+    margin-top: 80px;
     padding-top: 2em;
     padding-bottom: 2em;
 }
 
 footer.bottom div#footer-gfx-container {
-    margin-top: -105px; 
+    margin-top: -107px; 
 }
 
 /* 

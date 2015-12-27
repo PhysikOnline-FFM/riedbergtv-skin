@@ -45,22 +45,22 @@ $(function() {
 	});
 	
 	// hauptseite videolist
-	/* Das floating Layout von BS hat ein Problem, wenn die "Videokacheln" unterschiedliche Höhen haben, daher nutze ich jetzt JS um die Höhen anzugleichen. Schmutzig, aber so arbeitet PO. 07.12. */
 	if ($('.pagetitle h1').text().search('Hauptseite') > -1) {
-		$( window ).resize(function() {
-			/* Funktioniert auch 
-			var heights = $("div.videoliste").map(function (){ return $(this).height();}).get();
-			$("div.videoliste").each(function(e){ $(this).css('height', Math.max.apply(null, heights)); }); 
-			*/
-			
+		/* Das floating Layout von BS hat ein Problem, wenn die "Videokacheln" unterschiedliche Höhen haben, daher nutze ich jetzt JS um die Höhen anzugleichen. Schmutzig, aber so arbeitet PO. 07.12. */
+		function set_videolink_size(){
+			// reset to browser values
+			$("div.videolink img").height('auto');
+			// Than get a list of their heights
 			var heights = $("div.videolink img").map(function (){ return $(this).height();}).get();
 			// var widths  = $("div.videolink img").map(function (){ return $(this).width(); }).get();
 			$("div.videolink img").height( Math.max.apply(null, heights));
 			// $("div.videolink img").width(  Math.max.apply(null, widths) );
 			// $("div.videolink h3" ).width(  Math.max.apply(null, widths) -12 );
-			
-			// refresh
+		
 			$("div.videolink img").width('100%');
-		}).resize();
+		}
+		
+		$( window ).resize(set_videolink_size);
+		$("div.videolink img").on('load', set_videolink_size);
 	}
 });

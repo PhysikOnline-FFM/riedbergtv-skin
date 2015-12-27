@@ -16,6 +16,14 @@
 	width: 100%;
 	height: 360px;
 }
+
+#the-slider .slidesjs-slide{
+	display: none; /* During Load, is set to block by JS later */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 ul.slidesjs-pagination {
 	list-style: none;
 }
@@ -47,8 +55,8 @@ a.slidesjs-play,
       height:18px;
       overflow: hidden;
       text-indent: -9999px;
-      float: left;
-      margin-right:5px;
+      float: right;
+      margin-left:8px;
 }
 a.slidesjs-play {
       width:15px;
@@ -81,7 +89,8 @@ a.slidesjs-play {
 #the-slider h2 span {
 	font-family: Volkhov, 'Noto Serif', Georgia, serif;
 	font-weight: 700;
-	font-size: 32px;
+	font-size: 1.4em;
+	line-height: 1.3em;
 	color: white;
 
 	padding: 5px 10px 3px 10px;
@@ -93,7 +102,8 @@ a.slidesjs-play {
 #the-slider h3 span {
 	font-family: Bitter, sans-serif;
 	font-weight: 300;
-	font-size: 21px;
+	font-size: 1.1m;
+	line-height: 1.15em;
 	color: black;
 
 	margin-left: 10px;

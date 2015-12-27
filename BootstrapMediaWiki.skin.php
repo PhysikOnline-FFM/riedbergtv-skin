@@ -187,7 +187,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 				</div>
 			</div>
 		</nav>
-		<div id="wiki-outer-body">
+		<div id="wiki-outer-body" class="<?php if($wgUser->isLoggedIn()){echo 'userIsLoggedIn';}else{echo 'userIsNotLoggedIn';} ?>">
 			<div id="wiki-body" class="container">
 				<?php
 					if ( 'sidebar' == $wgTOCLocation ) {
@@ -244,7 +244,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 		<footer class="bottom">
 			<div class="container">
 				<div id="footer-gfx-container" class="visible-md visible-lg visible-md-block visible-lg-block">
-					<img id="footer-gfx" src="/w/skins/RiedbergTV/images/footer-gfx.png" />
+					<img id="footer-gfx" src="/w/images/5/5b/Footer-gfx.png" />
 				</div> 
 				
 				<?php $this->includePage('RiedbergTV:Footer'); ?>
