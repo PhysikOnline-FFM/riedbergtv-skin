@@ -87,6 +87,11 @@
 
 div#hauptseite-projektbeschreibung  p {margin: 0}
 
+/* Verstecke einige Dinge, solange es sich nicht um einen angemeldeten Nutzer handelt */
+.userIsNotLoggedIn table.video-metadaten{
+	display: none;
+}
+
 /* Screen Responsive Stuff */
 div#the-slider { display: none !important}
 
