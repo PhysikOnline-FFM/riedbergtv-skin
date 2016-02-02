@@ -257,7 +257,8 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 
 		<?php
 		$this->html('bottomscripts'); /* JS call to runBodyOnloadHook */
-
+		?>
+		
 		<!-- Piwik -->
 		<script type="text/javascript">
 			var _paq = _paq || [];
@@ -275,6 +276,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 		<noscript><p><img src="//elearning.physik.uni-frankfurt.de/logs/piwik/piwik.php?idsite=4" style="border:0;" alt="" /></p></noscript>
 		<!-- End Piwik Code -->
 
+		<?php
 		$this->html('reporttime');
 
 			if ( $this->data['debug'] ) {
