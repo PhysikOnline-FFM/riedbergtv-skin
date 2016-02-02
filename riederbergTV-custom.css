@@ -4,21 +4,27 @@
 
 /* Reduziere Höhe von normaler Navbar */
 .navbar {
-    min-height: 30px;
+  min-height: 30px;
 }
 .navbar-brand {
-    height: 30px;
+  height: 30px;
 }
 .navbar .nav > li > a, .navbar .navbar -nav > li > a, .navbar a.navbar-brand {
-    padding-top: 5px;
+	padding-top: 5px;
 	padding-bottom: 5px;
 }
 .subnav-fixed {
-    top: 29px;
+	top: 29px;
 	border-color: #d5d5d5;
-    background-color: inherit;
-    box-shadow: none;
+	background-color: inherit;
+	box-shadow: none;
 }
+
+/* Navbar-toggle Button verschieben */
+.navbar-toggle {
+	margin-right: 45px;
+}
+
 
 /* Anpassung für zweite Navbar (subnav) */
 .subnav {
@@ -34,7 +40,7 @@
 	margin: 0 -30px;
 }
 .subnav .nav {
-    display: block;
+  display: block;
 }
 
 .subnav .navbar-brand {
@@ -77,7 +83,7 @@
 }
 
 .subnav #subnav-bottom-catlinks .navbar-nav > li {
-    float: left;
+  float: left;
 }
 
 .subnav #subnav-bottom-catlinks {
@@ -111,6 +117,7 @@ div#the-slider { display: none !important}
 	}
 	.subnav .navbar-brand {
 		font-size: 3.0em;
+		padding: 15px 10px;
 	}
 	.subnav .navbar-brand img {
 		max-height: 60px;
@@ -123,8 +130,8 @@ div#the-slider { display: none !important}
 
 @media (min-width: 992px) {
 	div#the-slider { display: block !important}
-	
-	div#hauptseite-projektbeschreibung {margin-top: -2em}
+
+	div#hauptseite-projektbeschreibung { margin-top: -2em; }
 	div#hauptseite-projektbeschreibung  .mw-headline {
 		margin-top: 0;
 	}
@@ -143,7 +150,7 @@ div#the-slider { display: none !important}
 }
 
 
-/* 
+/*
  *
  * Videolinks (Allgemein)
  */
@@ -151,7 +158,7 @@ div#the-slider { display: none !important}
 	padding: 0;
 }
 
-/* 
+/*
  *
  * Videolinks auf Startseite
  */
@@ -164,39 +171,50 @@ div#the-slider { display: none !important}
 	text-decoration: none;
 }
 .videoliste.hauptseite .videolink  h3 {
-	opacity: 0.5;
+	opacity: 0.8;
 	transition: all 200ms linear 0s;
 	min-height: 43px;
 	/*line-height: 40px;*/
 	width: 100%;
 	padding: 1px 6px;
 	border: none !important;
-	
+
 	position: absolute;
 	bottom: 6px;
-	
+
 	color: white !important;
 	background-color: rgba(0, 0, 0, 0.85);
 	/*background-color: rgba(255, 255, 255, 0.8);*/
 }
-.videoliste.hauptseite .videolink :hover  h3,
-.videoliste.hauptseite .videolink :focus  h3,
-.videoliste.hauptseite .videolink :active  h3 {
+.videoliste.hauptseite .videolink :hover h3,
+.videoliste.hauptseite .videolink :focus h3,
+.videoliste.hauptseite .videolink :active h3 {
 	opacity: 1;
 	transition: all 200ms linear 0s;
-	
+
 	color: #222 !important;
 	/*Green from navbar# background-color: rgba(99,255,143, 0.8);*/
 	background-color: rgba(255, 255, 255, 0.8);
 }
-.videoliste.hauptseite .videolink  * .subtitle.small { font-size: 0.8em }
+
+.videoliste.hauptseite .videolink :hover span,
+.videoliste.hauptseite .videolink :focus span,
+.videoliste.hauptseite .videolink :active span, {
+	color: rgb(108, 108, 108);
+}
+
+
+.videoliste.hauptseite .videolink  * .subtitle h3 .small {
+	color: rgb(210, 205, 205)
+	font-size: 0.8em;
+}
 
 .videoliste.hauptseite .videolink  img {
 	max-width: 100%;
 	height: auto;
 }
 
-/* 
+/*
  *
  * Videolinks auf anderen Seiten
  */
@@ -217,7 +235,7 @@ div#the-slider { display: none !important}
 	margin-bottom: 4px;
 }
 
-/* 
+/*
  *
  * Videoseite
  */
@@ -228,7 +246,7 @@ video {
 }
 .videospalte {
 	text-align: justify;
-	
+
 	/* Kopiere BS CSS für col-md-8 hier herein, um nicht in allen Videos die Klasse manuell einfügen zu müssen */
 	position: relative;
 	min-height: 1px;
@@ -242,18 +260,21 @@ video {
 		width: 66.6667%;
 	}
 }
+/* Abstand zwischen Videoplayer und Text */
+.videobereich {
+	margin-bottom: 15px;
+}
 
 .seitenleiste table.wikitable, .seitenleiste h3 {
 	margin-top: 0px;
 }
 
 
-/* 
- *
+/*
  * Footer
  */
- footer.bottom {
-	color: white;
+footer.bottom {
+		color: white;
     background: #222;
     margin-top: 80px;
     padding-top: 2em;
@@ -261,22 +282,28 @@ video {
 }
 
 footer.bottom div#footer-gfx-container {
-    margin-top: -107px; 
+  margin-top: -107px;
 }
 
-/* 
+footer.floatright img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+/*
  * BS Overwrites
- * 
+ *
  */
 .btn, .well, .alert, .form-control, .list-group-item.videolink {
 	border-radius: 0;
 }
 
-/* 
+/*
  * FIXES
- * 
+ *
  */
- 
+
  /* No title on start page */
  .page-Hauptseite .pagetitle {
 	 display: none;
@@ -284,11 +311,11 @@ footer.bottom div#footer-gfx-container {
 
 /* Checkboxes */
 .client-js .mw-ui-checkbox:not(#noop) input[type="checkbox"] {
-    margin: 0;
+  margin: 0;
 	margin-left: -20px;
-    opacity: 1;
-    height: 20px;
-    width: 20px;
+  opacity: 1;
+  height: 20px;
+  width: 20px;
 }
 
 @media (max-width: 400px) {
