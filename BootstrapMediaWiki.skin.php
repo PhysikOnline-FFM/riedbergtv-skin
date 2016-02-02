@@ -136,7 +136,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 							<?php
 						}
 						?>
-							<ul class="nav navbar-nav navbar-right">						
+							<ul class="nav navbar-nav navbar-right">
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i></span></a>
 									<ul class="dropdown-menu">
@@ -162,7 +162,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 									</a>
 								</div>
 							</div>
-						
+
 							<div class="col-xs-5 col-md-6 text-right" id="subnav-top-right">
 								<form class="navbar-search navbar-form" action="<?php $this->text( 'wgScript' ) ?>" id="searchform" role="search">
 									<div class="input-group">
@@ -171,10 +171,10 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 									</div>
 									<input type="hidden" name="title" value="Special:Search">
 								</form>
-								
+
 							</div>
 						</div>
-						
+
 						<div class="row" id="subnav-bottom">
 							<div class="col-xs-12" id="subnav-bottom-catlinks">
 								<ul class="nav navbar-nav">
@@ -212,7 +212,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 
 				<div class="pagetitle page-header">
 					<h1><?php $this->html( 'title' ) ?> <small><?php $this->html('subtitle') ?></small></h1>
-				</div>	
+				</div>
 
 				<div class="body">
 				<?php $this->html( 'bodytext' ) ?>
@@ -245,18 +245,36 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 			<div class="container">
 				<div id="footer-gfx-container" class="visible-md visible-lg visible-md-block visible-lg-block">
 					<img id="footer-gfx" src="/w/images/5/5b/Footer-gfx.png" />
-				</div> 
-				
+				</div>
+
 				<?php $this->includePage('RiedbergTV:Footer'); ?>
-			  
-				<p>&copy; <?php echo date('Y'); ?> by <a href="<?php echo (isset($wgCopyrightLink) ? $wgCopyrightLink : 'http://borkweb.com'); ?>"><?php echo (isset($wgCopyright) ? $wgCopyright : 'BorkWeb'); ?></a> 
-					&bull; Powered by <a href="http://mediawiki.org">MediaWiki</a> 
+
+				<p>&copy; <?php echo date('Y'); ?> by <a href="<?php echo (isset($wgCopyrightLink) ? $wgCopyrightLink : 'http://borkweb.com'); ?>"><?php echo (isset($wgCopyright) ? $wgCopyright : 'BorkWeb'); ?></a>
+					&bull; Powered by <a href="http://mediawiki.org">MediaWiki</a>
 				</p>
 			</div><!-- container -->
 		</footer><!-- bottom -->
 
 		<?php
 		$this->html('bottomscripts'); /* JS call to runBodyOnloadHook */
+
+		<!-- Piwik -->
+		<script type="text/javascript">
+			var _paq = _paq || [];
+			_paq.push(["setDoNotTrack", true]);
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="//elearning.physik.uni-frankfurt.de/logs/piwik/";
+				_paq.push(['setTrackerUrl', u+'piwik.php']);
+				_paq.push(['setSiteId', 4]);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+		<noscript><p><img src="//elearning.physik.uni-frankfurt.de/logs/piwik/piwik.php?idsite=4" style="border:0;" alt="" /></p></noscript>
+		<!-- End Piwik Code -->
+
 		$this->html('reporttime');
 
 			if ( $this->data['debug'] ) {
@@ -412,7 +430,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 			}//end else
 		}
 
-		return $nav;	
+		return $nav;
 	}//end get_page_links
 
 	private function get_array_links( $array, $title, $which ) {
@@ -492,4 +510,3 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 
 	public static function link() { }
 }
-
