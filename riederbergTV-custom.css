@@ -52,10 +52,6 @@ div#subnav-top-right {
 .navbar {
   min-height: 30px;
 }
-/*.navbar-brand {
-  height: 30px;
-	padding-left: 50px;
-}*/
 .navbar .nav > li > a, .navbar .navbar -nav > li > a, .navbar a.navbar-brand {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -67,9 +63,9 @@ div#subnav-top-right {
 	box-shadow: none;
 }
 
-/* Navbar-toggle Button verschieben */
+/* navbar-toggle Button verschieben */
 .navbar-toggle {
-	margin-right: 45px;
+	margin-right: 20px;
 }
 
 
@@ -176,8 +172,6 @@ div#the-slider {
 	.subnav .container {
 		width: 720px;
 		padding: 0;
-		/*margin-left: auto;
-		margin-right: auto;*/
 	}
 
 	.subnav-NOT-fixed > div.container > div:first-child {
@@ -312,7 +306,6 @@ div#the-slider {
 }
 
 /*
- *
  * Videolinks auf anderen Seiten
  */
 .videoliste:not(.hauptseite) .videolink,
@@ -333,7 +326,6 @@ div#the-slider {
 }
 
 /*
- *
  * Videoseite
  */
 video {
@@ -391,7 +383,6 @@ footer.bottom div#footer-gfx-container {
 
 /*
  * BS Overwrites
- *
  */
 .btn, .well, .alert, .form-control, .list-group-item.videolink {
 	border-radius: 0;
@@ -399,7 +390,6 @@ footer.bottom div#footer-gfx-container {
 
 /*
  * FIXES
- *
  */
 
  /* No title on start page */
