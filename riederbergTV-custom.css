@@ -1,3 +1,5 @@
+/* Sticky navbar TEST!! */
+
 /* Mobile-first Ansatz, #subnav-bottom im mobilen Einsatz ausblenden! */
 #subnav-bottom {
 	display:none;
@@ -250,36 +252,40 @@ div#the-slider {
 	padding: 0;
 }
 
+/* Textfarbe des Video-Untertitels ändern und einen sehr dünnen Schatten drum rum setzen, für eine bessere Lesbarkeit*/
+div.videolink > a > h3 > span.small {
+	color: rgb(215, 215, 215);
+	/*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+	font-size: 80%;
+}
+
 /*
  * Videolinks auf Startseite
  */
-.videoliste.hauptseite .videolink  a.video {
+.videoliste.hauptseite .videolink a.video {
 	display: block;
 	position: relative;
 	margin-bottom: 8px;
 }
-.videoliste.hauptseite .videolink  a.video:hover {
+.videoliste.hauptseite .videolink a.video:hover {
 	text-decoration: none;
 }
-.videoliste.hauptseite .videolink  h3 {
+.videoliste.hauptseite .videolink h3 {
 	opacity: 0.8;
 	transition: all 200ms linear 0s;
 	min-height: 43px;
-	/*line-height: 40px;*/
 	width: 100%;
 	padding: 1px 6px;
 	border: none !important;
-
 	position: absolute;
 	bottom: 6px;
-
 	color: white !important;
 	background-color: rgba(0, 0, 0, 0.85);
 	/*background-color: rgba(255, 255, 255, 0.8);*/
 }
-.videoliste.hauptseite .videolink :hover h3,
-.videoliste.hauptseite .videolink :focus h3,
-.videoliste.hauptseite .videolink :active h3 {
+.videoliste.hauptseite .videolink:hover h3,
+.videoliste.hauptseite .videolink:focus h3,
+.videoliste.hauptseite .videolink:active h3 {
 	opacity: 1;
 	transition: all 200ms linear 0s;
 
@@ -288,17 +294,126 @@ div#the-slider {
 	background-color: rgba(255, 255, 255, 0.8);
 }
 
-.videoliste.hauptseite .videolink :hover span,
-.videoliste.hauptseite .videolink :focus span,
-.videoliste.hauptseite .videolink :active span, {
-	color: rgb(108, 108, 108);
+.videoliste.hauptseite .videolink:hover span.small,
+.videoliste.hauptseite .videolink:focus span.small,
+.videoliste.hauptseite .videolink:active span.small {
+	color: rgb(70, 70, 70);
+}
+
+.name-container {
+	/*float: left;
+	clear: both;*/
+	min-height: 43px;
+	width: 100%;
+	padding: 5px 10px;
+	border: none !important;
+	position: absolute;
+	bottom: 5px;
+	color: white !important;
+	font-weight: bold;
+}
+
+.name-container span {
+	opacity: 1;
+	color: rgb(20, 20, 20);
+}
+
+.name-container .dozent {
+	display: block;
+	width: 100%;
+	margin-right: 20px;
+}
+
+.name-container .dozentText span {
+	display: inline-block;
+	opacity: 0.8;
+	background-color: rgb(254, 22, 98);
+	font-size: 1.2em;
+	line-height: 1em;
+	padding: 5px 5px 5px 5px;
+	max-width: 85%;
+	text-align: left;
 }
 
 
-.videoliste.hauptseite .videolink  * .subtitle h3 .small {
+.name-container .videotitel {
+	display: block;
+	width: 100%;
+}
+
+.name-container .videotitelText span {
+	display: inline-block;
+	opacity: 0.8;
+	background-color: rgb(110, 203, 110);
+	font-size: 1em;
+	max-width: 85%;
+	margin-top: -4px;
+	margin-left: 15px;
+	line-height: 1.2em;
+	padding: 5px;
+	text-align: right;
+}
+
+.videolink:hover div.dozentText span,
+.videolink:focus div.dozentText span,
+.videolink:active div.dozentText span {
+	transition: all 250ms linear 0s;
+	opacity: 0.9;
+	background-color: rgb(254, 80, 130);
+}
+
+.videolink:hover div.videotitelText span,
+.videolink:focus div.videotitelText span,
+.videolink:active div.videotitelText span {
+	transition: all 250ms linear 0s;
+	opacity: 0.9;
+	background-color: rgb(150, 254, 171);
+}
+
+@media (min-width: 450px) {
+	.name-container .dozentText {
+		margin-left: 15px;
+	}
+	.name-container .videotitelText {
+		margin-left: 40px;
+	}
+}
+
+@media (min-width: 550px) {
+	.name-container .dozentText {
+		font-size: 1.4em;
+	}
+
+	.name-container .videotitelText {
+		font-size: 1.1em;
+	}
+}
+
+@media (min-width: 768px) {
+	.name-container .dozentText {
+		font-size: 1.4em;
+	}
+
+	.name-container .videotitelText {
+		font-size: 1.1em;
+	}
+}
+
+@media (min-width: 1200px) {
+	.name-container .dozentText {
+		font-size: 1.2em;
+	}
+
+	.name-container .videotitelText {
+		font-size: 1em;
+	}
+}
+
+
+/*.videoliste.hauptseite .videolink  * .subtitle h3 .small {
 	color: rgb(210, 205, 205)
 	font-size: 0.8em;
-}
+}*/
 
 .videoliste.hauptseite .videolink  img {
 	max-width: 100%;
@@ -406,16 +521,23 @@ footer.bottom div#footer-gfx-container {
   width: 20px;
 }
 
-@media (max-width: 400px) {
+/* TODO: Bilder im Content skalieren! */
+/*img.thumbimage {
+	max-width: 400px;
+	height: auto;
+}*/
+
+
+/*@media (max-width: 400px) {
 	h1, .h1 {font-size: 1.3em}
 	h2, .h2 {font-size: 1.2em}
 	h3, .h3 {font-size: 1.1em}
 }
-@media (min-width: 401px) {
+/*@media (min-width: 401px) {*/
 	h1, .h1 {font-size: 1.8em}
 	h2, .h2 {font-size: 1.5em}
 	h3, .h3 {font-size: 1.2em}
-}
+/*}*/
 @media (min-width: 768px) {
 	h1, .h1 {font-size: 2.0em}
 	h2, .h2 {font-size: 1.7em}
@@ -425,8 +547,12 @@ footer.bottom div#footer-gfx-container {
 	#wiki-body.container, .videospalte {
 		padding: 0;
 	}
-	body {padding-top: 40px}
+	body {
+		padding-top: 40px
+	}
 }
-@media (max-width: 979px) {
-	body {padding-top: 30px}
+@media (max-width: 991px) {
+	body {
+		padding-top: 30px
+	}
 }
