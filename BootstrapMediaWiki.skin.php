@@ -108,6 +108,9 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 						</div>
 
 						<div class="collapse navbar-collapse">
+							<ul id="dropdown-RTV-menu" class="nav navbar-nav navbar-right">
+								<?php echo $this->nav( $this->get_page_links( 'RiedbergTV:NavLinks' ) ); ?>
+							</ul>
 						<?php
 						if ( $wgUser->isLoggedIn() ) {
 							if ( count( $this->data['personal_urls'] ) > 0 ) {
@@ -155,7 +158,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 				<div class="container">
 					<div class="--collapse --navbar-collapse">
 						<div class="row" id="subnav-top">
-							<div class="col-xs-7 col-md-6" id="subnav-top-left">
+							<div class="col-xs-8 col-md-7" id="subnav-top-left">
 								<div class="navbar-header">
 									<a class="navbar-brand" href="<?php echo $this->data['nav_urls']['mainpage']['href'] ?>" title="<?php echo $wgSitename ?>">
 									<?php echo isset( $wgLogo ) && $wgLogo ? "<img src='{$wgLogo}' alt='RiedbergTV'/> " : ''; echo $wgSitename;?>
@@ -163,7 +166,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 								</div>
 							</div>
 
-							<div class="col-xs-5 col-md-6 text-right" id="subnav-top-right">
+							<div class="col-xs-4 col-md-5 text-right" id="subnav-top-right">
 								<form class="navbar-search navbar-form" action="<?php $this->text( 'wgScript' ) ?>" id="searchform" role="search">
 									<div class="input-group">
 										<input class="form-control" type="search" name="search" placeholder="Suche" title="Suche in <?php echo $wgSitename; ?> [ctrl-option-f]" accesskey="f" id="searchInput" autocomplete="off">
@@ -267,22 +270,6 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 				<?php
 			}//end if
 		?>
-			<!-- Piwik -->
-			<script type="text/javascript">
-				var _paq = _paq || [];
-				_paq.push(["setDoNotTrack", true]);
-				_paq.push(['trackPageView']);
-				_paq.push(['enableLinkTracking']);
-				(function() {
-					var u="//elearning.physik.uni-frankfurt.de/logs/piwik/";
-					_paq.push(['setTrackerUrl', u+'piwik.php']);
-					_paq.push(['setSiteId', 4]);
-					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-					g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-				})();
-			</script>
-			<noscript><p><img src="//elearning.physik.uni-frankfurt.de/logs/piwik/piwik.php?idsite=4" style="border:0;" alt="" /></p></noscript>
-			<!-- End Piwik Code -->
 		</body>
 		</html>
 		<?php
