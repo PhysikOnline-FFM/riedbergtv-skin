@@ -1,7 +1,3 @@
-/*#wiki-body {
-	padding: 0;
-}*/
-
 /* Mobile-first Ansatz, #subnav-bottom im mobilen Einsatz ausblenden! */
 #subnav-bottom {
 	display:none;
@@ -11,8 +7,8 @@
 	padding: 0;
 }
 
-/* Menü in mobiler Anzeige aufhübschen */
 @media(max-width: 767px) {
+	/* Menü in mobiler Anzeige aufhübschen */
 	nav div.navbar-collapse ul.nav {
 			text-align: center;
 	}
@@ -28,34 +24,24 @@
 	}
 }
 
+/* Branding richtig positionieren */
+.subnav-NOT-fixed {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.subnav .container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 /* Padding im Footer-Text resetten und auf 15px einstellen */
 footer > div.container {
 	padding: 0;
 }
 
-@media(max-width:767px) {
-	/* Padding der Artikel-Überschrift im kleineren Format richtig setzen */
-	#wiki-body > .pagetitle > h1 {
-		padding-left: 15px;
-	}
-	/* Padding des Logos im kleineren Format richtig setzen */
-	.subnav .navbar-brand img {
-		padding-left: 5px;
-	}
-}
-
-/* Padding des Logos+Schriftzug in den größen korrigieren! */
-/* TODO: Subnav korrigieren! */
-@media(min-width: 768px) and (max-width: 991px) {
-	.subnav-NOT-fixed > div.container {
-		padding: 0;
-	}
-}
-
-@media(min-width: 992px) {
-	.subnav-NOT-fixed > div.container {
-		padding: 0;
-	}
+div#subnav-top-right {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .subnav-NOT-fixed > div.container > div:first-child {
@@ -66,10 +52,10 @@ footer > div.container {
 .navbar {
   min-height: 30px;
 }
-.navbar-brand {
+/*.navbar-brand {
   height: 30px;
 	padding-left: 50px;
-}
+}*/
 .navbar .nav > li > a, .navbar .navbar -nav > li > a, .navbar a.navbar-brand {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -95,8 +81,11 @@ footer > div.container {
 }
 .subnav .container {
 	padding-bottom: 0;
+	/*margin: auto 20px;*/
 	border-bottom: 1px solid #D5D5D5;
 }
+
+/* Wichtig! Sonst wird das Branding um margin-left/right: -15px versetzt!  */
 .subnav .row {
 	margin: 0;
 }
@@ -109,11 +98,16 @@ footer > div.container {
 	font-size: 1.5em;
 	height: auto;
 	padding: 10px 0;
+	/*margin: auto -15px;*/
 	color: #111;
+}
+.navbar-brand img {
+	margin-right: 0;
 }
 .subnav .navbar-brand img {
 	max-height: 40px;
 	margin-left: 0;
+	margin
 	padding-right: 5px;
 }
 .subnav .nav {
@@ -137,6 +131,7 @@ footer > div.container {
 	border: none;
 	color: inherit;
 	padding-left: 0;
+	padding-right: 0;
 }
 
 .subnav #subnav-bottom-catlinks .navbar-nav > li {
@@ -163,7 +158,7 @@ div#the-slider {
 }
 
 .page-header {
-	margin: 0px -15px 10px;
+	margin: 10px 0;
 	padding: 0;
 }
 
@@ -175,6 +170,14 @@ div#the-slider {
 	/* Die untere Navigation in der Desktop-Ansicht anzeigen */
 	#subnav-bottom {
 		display: block;
+	}
+
+	/* Skalierung des Headers wieder auf den bootstrap3-Standard setzen, damit dieser richtig positioniert wird und mitskaliert */
+	.subnav .container {
+		width: 720px;
+		padding: 0;
+		/*margin-left: auto;
+		margin-right: auto;*/
 	}
 
 	.subnav-NOT-fixed > div.container > div:first-child {
@@ -190,10 +193,6 @@ div#the-slider {
 		padding: 0;
 	}
 
-	.subnav .container {
-		padding-top: 0;
-	}
-
 	/* Negatives margin-top, um das Branding nach oben zu schieben. Danach ziehen wird das Logo einzeln wieder runter. Dadurch können wir den RTV-Schriftzug und das Menü in etwa gleichen Verhältnissen auf der Höhe des Logos ausrichten! */
 	.subnav .navbar-brand {
 		font-size: 3.2em;
@@ -206,8 +205,8 @@ div#the-slider {
 		max-height: 105px;
 	}
 	.subnav #subnav-bottom-catlinks {
-		margin-left: 97px;
 		margin-top: -43px;
+		padding-left: 130px;
 	}
 }
 
@@ -222,6 +221,10 @@ div#the-slider {
 	div#hauptseite-projektbeschreibung .mw-headline {
 		margin-top: 0;
 	}
+	.subnav .container {
+			width: 940px;
+	}
+
 	/* Erklärung zum negativen margin-top: siehe oben. */
 	.subnav .navbar-brand {
 		font-size: 4em;
@@ -232,14 +235,21 @@ div#the-slider {
 		max-height: 110px;
 	}
 	.subnav #subnav-bottom-catlinks {
-		margin-left: 115px;
 		margin-top: -40px;
+		padding-left: 150px;
+	}
+	.subnav-NOT-fixed > div.container {
+		padding: 0;
 	}
 }
 
+@media (min-width: 1200px) {
+	.subnav .container {
+		width: 1140px;
+	}
+}
 
 /*
- *
  * Videolinks (Allgemein)
  */
 .list-group-item.videolink {
@@ -247,7 +257,6 @@ div#the-slider {
 }
 
 /*
- *
  * Videolinks auf Startseite
  */
 .videoliste.hauptseite .videolink  a.video {
@@ -422,7 +431,7 @@ footer.bottom div#footer-gfx-container {
 	h2, .h2 {font-size: 1.7em}
 	h3, .h3 {font-size: 1.3em}
 }
-@media (max-width: 769px) {
+@media (max-width: 767px) {
 	#wiki-body.container, .videospalte {
 		padding: 0;
 	}
