@@ -301,21 +301,17 @@ div.videolink > a > h3 > span.small {
 }
 
 .name-container {
-	/*float: left;
-	clear: both;*/
 	min-height: 43px;
 	width: 100%;
 	padding: 5px 10px;
 	border: none !important;
 	position: absolute;
 	bottom: 5px;
-	color: white !important;
-	font-weight: bold;
 }
 
 .name-container span {
-	opacity: 1;
-	color: rgb(20, 20, 20);
+	color: rgb(255, 255, 255);
+	font-weight: 500;
 }
 
 .name-container .dozent {
@@ -324,14 +320,14 @@ div.videolink > a > h3 > span.small {
 	margin-right: 20px;
 }
 
-.name-container .dozentText span {
+.name-container .dozentText > span {
 	display: inline-block;
-	opacity: 0.8;
-	background-color: rgb(254, 22, 98);
+	/*background-color: rgb(254, 22, 98);*/
+	background-color: rgba(255,50,103,0.9);
 	font-size: 1.2em;
 	line-height: 1em;
-	padding: 5px 5px 5px 5px;
-	max-width: 85%;
+	padding: 5px;
+	/*max-width: 85%;*/
 	text-align: left;
 }
 
@@ -339,18 +335,18 @@ div.videolink > a > h3 > span.small {
 .name-container .videotitel {
 	display: block;
 	width: 100%;
+	margin-top: -4px;
 }
 
-.name-container .videotitelText span {
+.name-container .videotitelText > span {
 	display: inline-block;
-	opacity: 0.8;
-	background-color: rgb(110, 203, 110);
+	background-color: rgba(89, 185, 89, 0.9);
 	font-size: 1em;
-	max-width: 85%;
-	margin-top: -4px;
+	/*max-width: 95%;*/
+	/*margin-top: -4px;*/
+	padding: 5px;
 	margin-left: 15px;
 	line-height: 1.2em;
-	padding: 5px;
 	text-align: right;
 }
 
@@ -358,16 +354,16 @@ div.videolink > a > h3 > span.small {
 .videolink:focus div.dozentText span,
 .videolink:active div.dozentText span {
 	transition: all 250ms linear 0s;
-	opacity: 0.9;
-	background-color: rgb(254, 80, 130);
+	/*background-color: rgb(254, 80, 130);*/
+	background-color: rgba(255,50,103,0.7);
 }
 
 .videolink:hover div.videotitelText span,
 .videolink:focus div.videotitelText span,
 .videolink:active div.videotitelText span {
 	transition: all 250ms linear 0s;
-	opacity: 0.9;
-	background-color: rgb(150, 254, 171);
+	/*background-color: rgba(150, 254, 171);*/
+	background-color: rgba(89, 185, 89, 0.7);
 }
 
 @media (min-width: 450px) {
@@ -408,7 +404,6 @@ div.videolink > a > h3 > span.small {
 		font-size: 1em;
 	}
 }
-
 
 /*.videoliste.hauptseite .videolink  * .subtitle h3 .small {
 	color: rgb(210, 205, 205)
