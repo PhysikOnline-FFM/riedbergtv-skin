@@ -454,8 +454,8 @@ video {
 	/* Kopiere BS CSS für col-md-8 hier herein, um nicht in allen Videos die Klasse manuell einfügen zu müssen */
 	position: relative;
 	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px;
+	/*padding-right: 15px;
+	padding-left: 15px;*/
 }
 @media (min-width: 992px) {
 	/* Kopiere BS CSS für col-md-8 hier herein, um nicht in allen Videos die Klasse manuell einfügen zu müssen */
