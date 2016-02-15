@@ -1,7 +1,7 @@
 /* Picture Resize test */
-div#wiki-body > .thumb img {
-	max-width: 100%;
-	height: auto;
+img, .thumbinner, .thumb {
+	max-width: 100% !important;
+	height: auto !important;
 	width: auto\9; /* ie8 */
 }
 
