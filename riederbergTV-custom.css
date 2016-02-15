@@ -1,4 +1,10 @@
-/* Sticky navbar TEST!! */
+/* Picture Resize test */
+div#wiki-body > .thumb img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
 #subnav-top-left {
 	display: none;
 }
