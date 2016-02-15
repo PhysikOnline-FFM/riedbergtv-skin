@@ -248,6 +248,10 @@ div#the-slider {
 		margin-top: -43px;
 		padding-left: 130px;
 	}
+
+	footer {
+		margin-top: 80px;
+	}
 }
 
 @media (min-width: 992px) {
@@ -409,7 +413,10 @@ div.videolink > a > h3 > span.small {
 	/*background-color: rgba(150, 254, 171);*/
 	background-color: rgba(89, 185, 89, 0.7);
 }
-
+/* Die ganzen folgenden Größenverhältnisse sind alle etwas arbiträr.. oder?
+	 Kann meinetwegen gerne zu etwas sinnvollerem geändert werden!
+	 MG - 20160215
+*/
 @media (min-width: 450px) {
 	.name-container .dozentText {
 		margin-left: 15px;
@@ -531,7 +538,6 @@ video {
 footer.bottom {
 		color: white;
     background: #222;
-    margin-top: 80px;
     padding-top: 2em;
     padding-bottom: 2em;
 }
