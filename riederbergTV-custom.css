@@ -248,10 +248,6 @@ div#the-slider {
 		margin-top: -43px;
 		padding-left: 130px;
 	}
-
-	footer.bottom {
-		margin-top: 80px;
-	}
 }
 
 @media (min-width: 992px) {
@@ -284,6 +280,9 @@ div#the-slider {
 	}
 	.subnav-NOT-fixed > div.container {
 		padding: 0;
+	}
+	footer.bottom {
+		margin-top: 80px;
 	}
 }
 
