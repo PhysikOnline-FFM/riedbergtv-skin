@@ -1,4 +1,28 @@
 /* Sticky navbar TEST!! */
+#subnav-top-left {
+	display: none;
+}
+
+.navbar-app-brand {
+	display: inline;
+	height: 50px;
+	/*vertical-align: middle;*/
+}
+
+.navbar-app-brand > a.navbar-brand {
+	color: white;
+	font-family: Volkhov, 'Noto Serif', Georgia, serif;
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+.navbar-app-brand img {
+	margin-left: 5px;
+	background-color: white;
+	min-height: 40px;
+	-moz-border-radius: 9px;
+ 	border-radius: 9px; /* standards-compliant: (IE) */
+}
 
 /* Mobile-first Ansatz, #subnav-bottom im mobilen Einsatz ausblenden! */
 #subnav-bottom {
@@ -111,6 +135,10 @@ div#subnav-top-right {
 .subnav .nav {
 	margin-left: -10px;
 }
+.subnav .navbar-search,
+.subnav .navbar-form {
+	margin-left: 0;
+}
 .subnav form#searchform {
 	display: inline-block;
 	padding: 0;
@@ -121,7 +149,7 @@ div#subnav-top-right {
 	width: 100%;
 	box-shadow: none;
 	background-color: transparent;
-	border: none;
+	/*border: none;*/
 	text-align: right;
 }
 .subnav form#searchform .input-group-addon {
@@ -130,6 +158,10 @@ div#subnav-top-right {
 	color: inherit;
 	padding-left: 0;
 	padding-right: 0;
+}
+
+.subnav form#searchform .input-group-addon i {
+	padding-left: 10px;
 }
 
 .subnav #subnav-bottom-catlinks .navbar-nav > li {
@@ -161,6 +193,14 @@ div#the-slider {
 }
 
 @media (min-width: 768px) {
+	.navbar-app-brand {
+		display:none;
+	}
+
+	#subnav-top-left {
+		display: block;
+	}
+
 	/* Links in der schwarzen Leiste verstecken, wenn wir in der Desktop-Ansicht sind! */
 	#dropdown-RTV-menu {
 		display: none;

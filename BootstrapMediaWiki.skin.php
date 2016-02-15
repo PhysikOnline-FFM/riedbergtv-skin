@@ -98,6 +98,12 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 					<div class="container">
 						<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 						<div class="navbar-header">
+							<div class="navbar-app-brand">
+									<a class="navbar-brand" href="/wiki/Hauptseite" title="RiedbergTV">
+										<img src='http://riedberg.tv/w/images/e/e9/RiedbergTV-2D-Bildmarke.png' alt='RiedbergTV'/>
+										RiedbergTV
+									</a>
+							</div>
 							<button class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
