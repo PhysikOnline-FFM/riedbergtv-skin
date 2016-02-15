@@ -34,6 +34,11 @@
 }
 
 @media(max-width: 767px) {
+	/* Suchleiste über die gesamte Breite strecken */
+  div#subnav-top-right {
+		width: 100%;
+	}
+
 	/* Menü in mobiler Anzeige aufhübschen */
 	nav div.navbar-collapse ul.nav {
 			text-align: center;
@@ -149,7 +154,6 @@ div#subnav-top-right {
 	width: 100%;
 	box-shadow: none;
 	background-color: transparent;
-	/*border: none;*/
 	text-align: right;
 }
 .subnav form#searchform .input-group-addon {
