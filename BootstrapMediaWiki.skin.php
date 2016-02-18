@@ -99,10 +99,10 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 						<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 						<div class="navbar-header">
 							<div class="navbar-app-brand">
-									<a class="navbar-brand" href="/wiki/Hauptseite" title="RiedbergTV">
-										<img src='http://riedberg.tv/w/images/e/e9/RiedbergTV-2D-Bildmarke.png' alt='RiedbergTV'/>
-										RiedbergTV
-									</a>
+								<a class="navbar-brand" href="<?php echo $this->data['nav_urls']['mainpage']['href'] ?>" title="<?php echo $wgSitename ?>">
+									<?php echo isset( $wgLogo ) && $wgLogo ? "<img src='{$wgLogo}' alt='RiedbergTV'/> " : ''; ?>
+									<?php echo $wgSitename; ?>
+								</a>
 							</div>
 							<button class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
 								<span class="sr-only">Toggle navigation</span>
