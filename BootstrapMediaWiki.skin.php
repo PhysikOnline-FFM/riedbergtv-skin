@@ -154,6 +154,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 										<?php if ( $wgEnableUploads ) { ?>
 										<li><a href="<?php echo $url_prefix; ?>Special:Upload" class="upload-a-file"><i class="fa fa-upload"></i> Datei hochladen</a></li>
 										<?php } ?>
+										<li><a href="<?php echo $url_prefix; ?>Special:VideoUpload" class="upload-a-file"><i class="fa fa-video-camera"></i> Video veröffentlichen</a></li>
 									</ul>
 								</li>
 							</ul>
