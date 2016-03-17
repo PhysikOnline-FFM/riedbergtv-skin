@@ -63,4 +63,24 @@ $(function() {
 		$( window ).resize(set_videolink_size);
 		$("div.videolink img").on('load', set_videolink_size);
 	}
+    
+    // video.js plugin
+    // https://github.com/kmoskwiak/videojs-resolution-switcher
+    videojs('video', {
+      controls: true,
+      fluid: true, // responsive width
+      plugins: {
+        videoJsResolutionSwitcher: {
+          default: 'low',
+          dynamicLabel: true
+        }
+      }
+    }, function(){
+        var player = this; // this is player
+        window.player = player
+
+        player.on('resolutionchange', function(){
+            //console.info('Source changed to %s', player.src())
+        })
+    });
 });
