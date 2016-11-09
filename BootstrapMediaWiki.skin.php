@@ -38,6 +38,7 @@ class SkinBootstrapMediaWiki extends SkinTemplate {
 		parent::initPage( $out );
 		$out->addModuleScripts( 'skins.bootstrapmediawiki' );
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1, maximum-scale=1' );
+        $out->addScript( '<script type="text/javascript" async defer src="https://elearning.physik.uni-frankfurt.de/local/po-unterstuetzt/po-unterstuetzt.js"></script>' );
 	}//end initPage
 
 	/**
@@ -260,11 +261,11 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 				<?php $this->includePage('RiedbergTV:Footer'); ?>
 
 				<p>&copy; <?php echo date('Y'); ?> by <a href="<?php echo (isset($wgCopyrightLink) ? $wgCopyrightLink : 'http://borkweb.com'); ?>"><?php echo (isset($wgCopyright) ? $wgCopyright : 'BorkWeb'); ?></a>
-					&bull; Powered by <a href="http://mediawiki.org">MediaWiki</a>
+					&bull; Powered by <a href="http://mediawiki.org">MediaWiki</a> &bull; <span class="poweredByPO">Build with <span style="color: #FF8E8E;font-size: 140%;">&hearts;</span> by <a href="https://physikonline.uni-frankfurt.de">PhysikOnline</a></span>
 				</p>
 			</div><!-- container -->
 		</footer><!-- bottom -->
-
+		
 		<?php
 		$this->html('bottomscripts'); /* JS call to runBodyOnloadHook */
 		$this->html('reporttime');
@@ -482,7 +483,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 			$wgParserOptions = new ParserOptions($wgUser);
 			// get the text as static wiki text, but with already expanded templates,
 			// which also e.g. to use {{#dpl}} (DPL third party extension) for dynamic menus.
-			$parserOutput = $wgParser->preprocess($article->getRawText(), $pageTitle, $wgParserOptions );
+			$parserOutput = $wgParser->preprocess($article->getContent(), $pageTitle, $wgParserOptions );
 			return $parserOutput;
 		}
 	}
@@ -495,7 +496,7 @@ class BootstrapMediaWikiTemplate extends QuickTemplate {
 		} else {
 			$article = new Article($pageTitle);
 			$wgParserOptions = new ParserOptions($wgUser);
-			$parserOutput = $wgParser->parse($article->getRawText(), $pageTitle, $wgParserOptions);
+			$parserOutput = $wgParser->parse($article->getContent(), $pageTitle, $wgParserOptions);
 			echo $parserOutput->getText();
 		}
 	}
